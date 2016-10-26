@@ -8,6 +8,7 @@
 body{
   font-family: "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1","Hiragino Sans GB","华文细黑","arial","sans-serif";
   background-color: #FCFCFC;
+  word-break: break-all;
 }
 *{
   box-sizing: border-box;
@@ -265,8 +266,8 @@ input,button{
   }
   .message-item-content {
     height: 146px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 40px;  /*px*/
+    padding-bottom: 40px; /*px*/
     border-bottom: 1px solid #DCDCDC; /*no*/
   }
   .diamonds-large{
@@ -277,16 +278,20 @@ input,button{
   }
   .item-text{
     width: 552px;
-    padding-left: 30px;
-    padding-right: 32px;
+    padding-left: 30px; /*px*/
+    padding-right: 32px;  /*px*/
     height: 68px;
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 28px;  /*px*/
+    line-height: 34px;  /*px*/
     text-align: justify;
     color: #282828;
 
     > span {
-      color: #e63100;
+      -webkit-line-clamp: 2;
+
+      i {
+        color: #e63100;
+      }
     }
   }
   .info-text {
@@ -382,9 +387,6 @@ article .title-more{
     background-position: 21px 0;
   }
 }
-article img{
-  margin: 35px 0;
-}
 .article-classify{
   padding: 0 57px 35px 57px;
   margin-bottom: 28px;
@@ -452,12 +454,15 @@ article img{
   background-position: center center;
 }
 .companion-info{
-  display: -webkit-flex;
-  -webkit-flex-flow: column;
-  -webkit-justify-content: center;
   padding-right: 18px;
   width: 406px;
   height: 120px;
+}
+.message-lists .item-text,
+.companion-info {
+  display: -webkit-flex;
+  -webkit-flex-flow: column;
+  -webkit-justify-content: center;
 }
 .info-title{
   font-size: 28px;
@@ -494,28 +499,27 @@ article img{
 .about-concat,
 .about-section,
 .companion-section {
-  padding-left: 58px;
-  padding-right: 58px;
-  font-size: 28px;
-  line-height: 52px;
+  padding-left: 58px; /*px*/
+  padding-right: 58px;  /*px*/
+  font-size: 28px;  /*px*/
+  line-height: 52px;  /*px*/
   color: #777;
 }
 
 .about-section {
-  font-size: 28px;
+  font-size: 28px; /*px*/
   padding-top: 75px;
   padding-bottom: 75px;
   line-height: 52px;
   border-bottom: 1px solid #C9C9C9; /*no*/
 }
-
 .page-bg {
   width: 640px;
   height: 261px;
 }
 
 .classify-title {
-  padding: 75px 0;
+  padding: 55px 0 50px 0; /**/
   font-size: 28px;
   color: #333;
   text-align: center;
@@ -528,12 +532,25 @@ article img{
   padding-bottom: 50px;
 }
 .about-concat-item {
-  margin-bottom: 26px;
-  padding: 38px 40px 30px 34px;
+  margin-bottom: 26px; /*px*/
+  padding: 38px 40px 30px 34px; /*px*/
   width: 100%;
-  font-size: 22px;
+  font-size: 22px; /*px*/
   color: #999;
   background-color: #EDEDED;
+
+  &:last-child {
+    h3 {
+      padding-top: 18px;
+    }
+    span {
+      font-size: 18px;
+    }
+    img {
+      width: 198px;
+      height: 198px;
+    }
+  }
 
   h3 {
     padding-bottom: 5px;

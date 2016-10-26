@@ -9,6 +9,7 @@
 body {
   font-family: "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1","Hiragino Sans GB","华文细黑","arial","sans-serif";
   background-color: #FCFCFC;
+  word-break: break-all;
 }
 
 * {
@@ -288,9 +289,22 @@ button {
 
 .message-lists .message-item-content {
   height: 2.28125rem;
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
   border-bottom: 1px solid #DCDCDC;
+}
+
+[data-dpr="1"] .message-lists .message-item-content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+[data-dpr="2"] .message-lists .message-item-content {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+[data-dpr="3"] .message-lists .message-item-content {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .message-lists .diamonds-large {
@@ -301,16 +315,37 @@ button {
 
 .message-lists .item-text {
   width: 8.625rem;
-  padding-left: 0.46875rem;
-  padding-right: 0.5rem;
   height: 1.0625rem;
-  font-size: 0.4375rem;
-  line-height: 0.53125rem;
   text-align: justify;
   color: #282828;
 }
 
+[data-dpr="1"] .message-lists .item-text {
+  padding-left: 15px;
+  padding-right: 16px;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+[data-dpr="2"] .message-lists .item-text {
+  padding-left: 30px;
+  padding-right: 32px;
+  font-size: 28px;
+  line-height: 34px;
+}
+
+[data-dpr="3"] .message-lists .item-text {
+  padding-left: 45px;
+  padding-right: 48px;
+  font-size: 42px;
+  line-height: 51px;
+}
+
 .message-lists .item-text > span {
+  -webkit-line-clamp: 2;
+}
+
+.message-lists .item-text > span i {
   color: #e63100;
 }
 
@@ -415,10 +450,6 @@ article .title-more .china-flag {
   background-position: 0.328125rem 0;
 }
 
-article img {
-  margin: 0.546875rem 0;
-}
-
 .article-classify {
   padding: 0 0.890625rem 0.546875rem 0.890625rem;
   margin-bottom: 0.4375rem;
@@ -488,12 +519,16 @@ article img {
 }
 
 .companion-info {
-  display: -webkit-flex;
-  -webkit-flex-flow: column;
-  -webkit-justify-content: center;
   padding-right: 0.28125rem;
   width: 6.34375rem;
   height: 1.875rem;
+}
+
+.message-lists .item-text,
+.companion-info {
+  display: -webkit-flex;
+  -webkit-flex-flow: column;
+  -webkit-justify-content: center;
 }
 
 .info-title {
@@ -534,19 +569,53 @@ article img {
 .about-concat,
 .about-section,
 .companion-section {
-  padding-left: 0.90625rem;
-  padding-right: 0.90625rem;
-  font-size: 0.4375rem;
-  line-height: 0.8125rem;
   color: #777;
 }
 
+[data-dpr="1"] .about-concat,
+[data-dpr="1"] .about-section,
+[data-dpr="1"] .companion-section {
+  padding-left: 29px;
+  padding-right: 29px;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+[data-dpr="2"] .about-concat,
+[data-dpr="2"] .about-section,
+[data-dpr="2"] .companion-section {
+  padding-left: 58px;
+  padding-right: 58px;
+  font-size: 28px;
+  line-height: 52px;
+}
+
+[data-dpr="3"] .about-concat,
+[data-dpr="3"] .about-section,
+[data-dpr="3"] .companion-section {
+  padding-left: 87px;
+  padding-right: 87px;
+  font-size: 42px;
+  line-height: 78px;
+}
+
 .about-section {
-  font-size: 0.4375rem;
   padding-top: 1.171875rem;
   padding-bottom: 1.171875rem;
   line-height: 0.8125rem;
   border-bottom: 1px solid #C9C9C9;
+}
+
+[data-dpr="1"] .about-section {
+  font-size: 14px;
+}
+
+[data-dpr="2"] .about-section {
+  font-size: 28px;
+}
+
+[data-dpr="3"] .about-section {
+  font-size: 42px;
 }
 
 .page-bg {
@@ -555,7 +624,8 @@ article img {
 }
 
 .classify-title {
-  padding: 1.171875rem 0;
+  padding: 0.859375rem 0 0.78125rem 0;
+  /**/
   font-size: 0.4375rem;
   color: #333;
   text-align: center;
@@ -570,12 +640,40 @@ article img {
 }
 
 .about-concat-item {
-  margin-bottom: 0.40625rem;
-  padding: 0.59375rem 0.625rem 0.46875rem 0.53125rem;
   width: 100%;
-  font-size: 0.34375rem;
   color: #999;
   background-color: #EDEDED;
+}
+
+[data-dpr="1"] .about-concat-item {
+  margin-bottom: 13px;
+  padding: 19px 20px 15px 17px;
+  font-size: 11px;
+}
+
+[data-dpr="2"] .about-concat-item {
+  margin-bottom: 26px;
+  padding: 38px 40px 30px 34px;
+  font-size: 22px;
+}
+
+[data-dpr="3"] .about-concat-item {
+  margin-bottom: 39px;
+  padding: 57px 60px 45px 51px;
+  font-size: 33px;
+}
+
+.about-concat-item:last-child h3 {
+  padding-top: 0.28125rem;
+}
+
+.about-concat-item:last-child span {
+  font-size: 0.28125rem;
+}
+
+.about-concat-item:last-child img {
+  width: 3.09375rem;
+  height: 3.09375rem;
 }
 
 .about-concat-item h3 {
