@@ -1,0 +1,24 @@
+{
+  "name": "germany",
+  "version": "1.0.0",
+  "description": "收获德国",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/w1997/germany.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/w1997/germany/issues"
+  },
+  "homepage": "https://github.com/w1997/germany#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "px2rem": "^0.5.0"
+  }
+}
