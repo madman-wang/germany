@@ -10,6 +10,7 @@ body {
   font-family: "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1","Hiragino Sans GB","华文细黑","arial","sans-serif";
   background-color: #FCFCFC;
   word-break: break-all;
+  overflow-x: hidden;
 }
 
 * {
@@ -528,11 +529,24 @@ article img {
 
 article .title-more {
   position: relative;
-  padding: 0.5rem 0.65625rem 0.5625rem 1.34375rem;
-  font-size: 0.34375rem;
   border-top: 1px solid #C9C9C9;
   border-bottom: 1px solid #C9C9C9;
   overflow: hidden;
+}
+
+[data-dpr="1"] article .title-more {
+  padding: 16px 21px 18px 29px;
+  font-size: 11px;
+}
+
+[data-dpr="2"] article .title-more {
+  padding: 32px 42px 36px 58px;
+  font-size: 22px;
+}
+
+[data-dpr="3"] article .title-more {
+  padding: 48px 63px 54px 87px;
+  font-size: 33px;
 }
 
 article .title-more .flag {
@@ -583,20 +597,20 @@ article .title-more li {
 
 article .title-more li > span {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: bottom;
   color: #acacac;
 }
 
 [data-dpr="1"] article .title-more li > span {
-  width: 54px;
+  width: 52px;
 }
 
 [data-dpr="2"] article .title-more li > span {
-  width: 108px;
+  width: 104px;
 }
 
 [data-dpr="3"] article .title-more li > span {
-  width: 162px;
+  width: 156px;
 }
 
 article .title-more li:last-child {
@@ -609,24 +623,25 @@ article .title-more li:last-child {
   border-bottom: 1px solid #C9C9C9;
   background-image: url("../images/info-cell-icon.jpg");
   background-repeat: no-repeat;
+  background-size: 30px;
 }
 
 [data-dpr="1"] .article-classify {
   padding: 0 28.5px 17.5px 28.5px;
   line-height: 21px;
-  background-position: 0 30px;
+  background-position: 0 28.5px;
 }
 
 [data-dpr="2"] .article-classify {
   padding: 0 57px 35px 57px;
   line-height: 42px;
-  background-position: 0 60px;
+  background-position: 0 57px;
 }
 
 [data-dpr="3"] .article-classify {
   padding: 0 85.5px 52.5px 85.5px;
   line-height: 63px;
-  background-position: 0 90px;
+  background-position: 0 85.5px;
 }
 
 .article-classify:last-child {
@@ -695,8 +710,6 @@ article .title-more li:last-child {
 }
 
 .companion-logo {
-  width: 2.8125rem;
-  height: 1.875rem;
   border: 1px solid #C9C9C9;
   background-size: contain;
   background-color: #fff;
@@ -704,17 +717,44 @@ article .title-more li:last-child {
   background-position: center center;
 }
 
+[data-dpr="1"] .companion-logo {
+  width: 90px;
+  height: 60px;
+}
+
+[data-dpr="2"] .companion-logo {
+  width: 180px;
+  height: 120px;
+}
+
+[data-dpr="3"] .companion-logo {
+  width: 270px;
+  height: 180px;
+}
+
 .companion-info {
-  padding-right: 0.28125rem;
   width: 6.34375rem;
-  height: 1.875rem;
+}
+
+[data-dpr="1"] .companion-info {
+  padding-right: 9px;
+  height: 60px;
+}
+
+[data-dpr="2"] .companion-info {
+  padding-right: 18px;
+  height: 120px;
+}
+
+[data-dpr="3"] .companion-info {
+  padding-right: 27px;
+  height: 180px;
 }
 
 .message-lists .item-text,
 .companion-info {
   display: -webkit-flex;
   -webkit-flex-flow: column;
-  -webkit-align-items: center;
   -webkit-justify-content: center;
 }
 

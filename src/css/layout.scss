@@ -9,6 +9,7 @@ body{
   font-family: "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1","Hiragino Sans GB","华文细黑","arial","sans-serif";
   background-color: #FCFCFC;
   word-break: break-all;
+  overflow-x: hidden;
 }
 *{
   box-sizing: border-box;
@@ -372,8 +373,8 @@ article img {
 }
 article .title-more{
   position: relative;
-  padding: 32px 42px 36px 86px;
-  font-size: 22px;
+  padding: 32px 42px 36px 58px; /*px*/
+  font-size: 22px;  /*px*/
   border-top: 1px solid #C9C9C9; /*no*/
   border-bottom: 1px solid #C9C9C9; /*no*/
   overflow: hidden;
@@ -401,8 +402,8 @@ article .title-more{
 
     > span {
       display: inline-block;
-      vertical-align: middle;
-      width: 108px; /*px*/
+      vertical-align: bottom;
+      width: 104px; /*px*/
       color: #acacac;
     }
 
@@ -422,7 +423,8 @@ article .title-more{
   border-bottom: 1px solid #C9C9C9; /*no*/
   background-image: url("../images/info-cell-icon.jpg");
   background-repeat: no-repeat;
-  background-position: 0 60px;  /*px*/
+  background-position: 0 57px;  /*px*/
+  background-size: 30px; /*no*/
 
   &:last-child {
     border-top: 1px solid #C9C9C9; /*no*/
@@ -475,8 +477,8 @@ article .title-more{
   background-color: #F3A309;
 }
 .companion-logo{
-  width: 180px;
-  height: 120px;
+  width: 180px; /*px*/
+  height: 120px;  /*px*/
   border: 1px solid #C9C9C9; /*no*/
   background-size: contain;
   background-color: #fff;
@@ -484,15 +486,14 @@ article .title-more{
   background-position: center center;
 }
 .companion-info{
-  padding-right: 18px;
+  padding-right: 18px;  /*px*/
   width: 406px;
-  height: 120px;
+  height: 120px;  /*px*/
 }
 .message-lists .item-text,
 .companion-info {
   display: -webkit-flex;
   -webkit-flex-flow: column;
-  -webkit-align-items: center;
   -webkit-justify-content: center;
 }
 .info-title{
