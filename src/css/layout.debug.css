@@ -22,6 +22,10 @@ img {
   max-width: 100%;
 }
 
+.text-indent {
+  text-indent: 2em;
+}
+
 i {
   font-style: normal;
 }
@@ -212,22 +216,24 @@ button {
 
 .browse,
 .companion {
-  padding-left: 0.28125rem;
   background-color: #FCFCFC;
 }
 
 [data-dpr="1"] .browse,
 [data-dpr="1"] .companion {
+  padding-left: 9px;
   font-size: 11px;
 }
 
 [data-dpr="2"] .browse,
 [data-dpr="2"] .companion {
+  padding-left: 18px;
   font-size: 22px;
 }
 
 [data-dpr="3"] .browse,
 [data-dpr="3"] .companion {
+  padding-left: 27px;
   font-size: 33px;
 }
 
@@ -710,6 +716,7 @@ article .title-more li:last-child {
 }
 
 .companion-logo {
+  width: 2.8125rem;
   border: 1px solid #C9C9C9;
   background-size: contain;
   background-color: #fff;
@@ -718,35 +725,35 @@ article .title-more li:last-child {
 }
 
 [data-dpr="1"] .companion-logo {
-  width: 90px;
   height: 60px;
 }
 
 [data-dpr="2"] .companion-logo {
-  width: 180px;
   height: 120px;
 }
 
 [data-dpr="3"] .companion-logo {
-  width: 270px;
   height: 180px;
 }
 
 .companion-info {
-  width: 6.34375rem;
+  width: 6.90625rem;
 }
 
 [data-dpr="1"] .companion-info {
+  padding-left: 9px;
   padding-right: 9px;
   height: 60px;
 }
 
 [data-dpr="2"] .companion-info {
+  padding-left: 18px;
   padding-right: 18px;
   height: 120px;
 }
 
 [data-dpr="3"] .companion-info {
+  padding-left: 27px;
   padding-right: 27px;
   height: 180px;
 }

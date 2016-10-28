@@ -18,6 +18,9 @@ img{
   display: block;
   max-width: 100%;
 }
+.text-indent {
+  text-indent: 2em;
+}
 i{
   font-style: normal;
 }
@@ -176,7 +179,7 @@ input,button{
   background-color: #91CB66;
 }
 .browse{
-  padding-left: 18px;
+  padding-left: 18px; /*px*/
   font-size: 22px;  /*px*/
   background-color: #FCFCFC;
 }
@@ -477,7 +480,7 @@ article .title-more{
   background-color: #F3A309;
 }
 .companion-logo{
-  width: 180px; /*px*/
+  width: 180px;
   height: 120px;  /*px*/
   border: 1px solid #C9C9C9; /*no*/
   background-size: contain;
@@ -486,8 +489,9 @@ article .title-more{
   background-position: center center;
 }
 .companion-info{
+  padding-left: 18px;  /*px*/
   padding-right: 18px;  /*px*/
-  width: 406px;
+  width: 442px;
   height: 120px;  /*px*/
 }
 .message-lists .item-text,
