@@ -191,6 +191,7 @@ input,button{
   border-bottom: 1px solid #DCDCDC; /*no*/
   color: #777;
   text-align: center;
+  touch-action: none;
   &:after {
     display: block;
     content: "";
@@ -203,9 +204,6 @@ input,button{
       text-decoration: none;
     }
 
-  }
-  &:hover ul {
-    display: block;
   }
   .top-arrow,
   .bottom-arrow{
@@ -230,7 +228,6 @@ input,button{
     border-bottom: 12px solid #000;
   }
   ul {
-    display: none;
     position: absolute;
     z-index: 10;
     left: 199px;
@@ -373,12 +370,12 @@ article img {
   padding-top: 44px;  /*px*/
   padding-left: 58px; /*px*/
   padding-right: 58px;  /*px*/
+  border-bottom: 1px solid #C9C9C9; /*no*/
 }
 article .title-more{
   position: relative;
   padding: 32px 42px 36px 58px; /*px*/
   font-size: 22px;  /*px*/
-  border-top: 1px solid #C9C9C9; /*no*/
   border-bottom: 1px solid #C9C9C9; /*no*/
   overflow: hidden;
 
@@ -386,24 +383,28 @@ article .title-more{
     margin-right: 16px; /*px*/
     display: inline-block;
     vertical-align: middle;
-    width: 31px;
-    height: 31px;
-    line-height: 31px;
-    font-size: 14px;
-    padding-left: 3px;
+    width: 31px;  /*px*/
+    height: 31px; /*px*/
+    line-height: 31px;  /*px*/
+    font-size: 14px;  /*px*/
+    padding-left: 3px;  /*px*/
   }
 
   .germany-flag,
   .china-flag {
-    background-position: 21px 0;
+    background-position: 21px 0;  /*px*/
   }
 
   li {
     position: relative;
+    padding-left: 104px; /*px*/
     padding-bottom: 28px; /*px*/
     line-height: 38px;  /*px*/
 
     > span {
+      position: absolute;
+      left: 0;
+      top: 0;
       display: inline-block;
       vertical-align: bottom;
       width: 104px; /*px*/

@@ -245,6 +245,7 @@ button {
   border-bottom: 1px solid #DCDCDC;
   color: #777;
   text-align: center;
+  touch-action: none;
 }
 
 .browse-click:after {
@@ -259,10 +260,6 @@ button {
 
 .browse-click > a:hover {
   text-decoration: none;
-}
-
-.browse-click:hover ul {
-  display: block;
 }
 
 .browse-click .top-arrow,
@@ -291,7 +288,6 @@ button {
 }
 
 .browse-click ul {
-  display: none;
   position: absolute;
   z-index: 10;
   left: 3.109375rem;
@@ -515,6 +511,10 @@ article img {
   line-height: 78px;
 }
 
+.info-article-title-wrap .article-title {
+  border-bottom: 1px solid #C9C9C9;
+}
+
 [data-dpr="1"] .info-article-title-wrap .article-title {
   padding-top: 22px;
   padding-left: 29px;
@@ -535,7 +535,6 @@ article img {
 
 article .title-more {
   position: relative;
-  border-top: 1px solid #C9C9C9;
   border-bottom: 1px solid #C9C9C9;
   overflow: hidden;
 }
@@ -558,28 +557,48 @@ article .title-more {
 article .title-more .flag {
   display: inline-block;
   vertical-align: middle;
-  width: 0.484375rem;
-  height: 0.484375rem;
-  line-height: 0.484375rem;
-  font-size: 0.21875rem;
-  padding-left: 0.046875rem;
 }
 
 [data-dpr="1"] article .title-more .flag {
   margin-right: 8px;
+  width: 15.5px;
+  height: 15.5px;
+  line-height: 15.5px;
+  font-size: 7px;
+  padding-left: 1.5px;
 }
 
 [data-dpr="2"] article .title-more .flag {
   margin-right: 16px;
+  width: 31px;
+  height: 31px;
+  line-height: 31px;
+  font-size: 14px;
+  padding-left: 3px;
 }
 
 [data-dpr="3"] article .title-more .flag {
   margin-right: 24px;
+  width: 46.5px;
+  height: 46.5px;
+  line-height: 46.5px;
+  font-size: 21px;
+  padding-left: 4.5px;
 }
 
-article .title-more .germany-flag,
-article .title-more .china-flag {
-  background-position: 0.328125rem 0;
+[data-dpr="1"] article .title-more .germany-flag,
+[data-dpr="1"] article .title-more .china-flag {
+  background-position: 10.5px 0;
+}
+
+[data-dpr="2"] article .title-more .germany-flag,
+[data-dpr="2"] article .title-more .china-flag {
+  background-position: 21px 0;
+}
+
+[data-dpr="3"] article .title-more .germany-flag,
+[data-dpr="3"] article .title-more .china-flag {
+  background-position: 31.5px 0;
 }
 
 article .title-more li {
@@ -587,21 +606,27 @@ article .title-more li {
 }
 
 [data-dpr="1"] article .title-more li {
+  padding-left: 52px;
   padding-bottom: 14px;
   line-height: 19px;
 }
 
 [data-dpr="2"] article .title-more li {
+  padding-left: 104px;
   padding-bottom: 28px;
   line-height: 38px;
 }
 
 [data-dpr="3"] article .title-more li {
+  padding-left: 156px;
   padding-bottom: 42px;
   line-height: 57px;
 }
 
 article .title-more li > span {
+  position: absolute;
+  left: 0;
+  top: 0;
   display: inline-block;
   vertical-align: bottom;
   color: #acacac;

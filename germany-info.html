@@ -18,7 +18,7 @@
         <div class="browse-click">
             <a href="javascript:">分类浏览</a>
             <div class="bottom-arrow"></div>
-            <ul>
+            <ul style="display: none">
                 <li class="top-arrow"></li>
                 <li><a href="javascript:">全部</a></li>
                 <li><a href="javascript:">商务交流</a></li>
@@ -33,13 +33,20 @@
                     <p class="item-text f-r"><span class="line-clamp"><i>[文化创意]</i>德国柏林从"世界德国柏林从"世界德国柏林从"世界德国柏林从"世界德国柏林从"世界德国柏林从"世界德国柏林从"世界德国柏林从"世界德国柏林从"世界德国柏林从"世界德国柏林从"世界德国柏林从"世界德国柏林从"世界德国柏林从"世界德国柏林从"世界</span></p>
                 </div>
             </a>
-            <a class="item item-bg" href="germany-info-detail.html">
-                <div class="message-item-content">
-                    <div style="background-image: url('src/images/china-flag.png')" class="flag f-l gong">供</div>
-                    <p class="item-text f-r"><span class="line-clamp"><i>[文化创意]</i>德国柏林从"世界德国柏林从"世界德国柏林从"世界德国柏林从"世界德国柏林从"世界德国柏林从"世界德国柏林从"世界德国柏林从"世界德国柏林从"世界德国柏林从"世界德国柏林从"世界德国柏林从"世界德国柏林从"世界德国柏林从"世界德国柏林从"世界</span></p>
-                </div>
-            </a>
         </div>
     </div>
+
+    <script type="text/javascript">
+        var browseUl = document.querySelector('.browse-click ul');
+        document.querySelector('.browse-click').onclick = function () {
+            if ( browseUl.style.display == 'none' ) {
+                document.body.style.height = '100vh';
+                browseUl.style.display = 'block';
+            } else {
+                browseUl.style.display = 'none';
+                document.body.style.height = 'auto';
+            }
+        };
+    </script>
 </body>
 </html>
