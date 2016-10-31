@@ -88,13 +88,13 @@ input,button{
     h3 {
       padding-bottom: 30px;
       font-size: 28px;
-      color: #747474;
+      color: #949494;
     }
     .button {
       display: block;
       width: 500px;
       border-radius: 6px;
-      background-color: #FFCE03;
+      background-color: #DD0000;
 
       > img {
         display: inline-block;
@@ -107,6 +107,7 @@ input,button{
       button{
         @include button(83px);
         font-size: 38px;
+        color: #fff;
       }
     }
   }
@@ -367,15 +368,18 @@ article img {
   color: #282828;
 }
 .info-article-title-wrap .article-title {
-  padding-top: 44px;  /*px*/
-  padding-left: 58px; /*px*/
-  padding-right: 58px;  /*px*/
-  border-bottom: 1px solid #C9C9C9; /*no*/
+  position: relative;
+  padding: 0;
+
+  h1 {
+    padding: 44px 58px; /*px*/
+    border-bottom: 1px solid #C9C9C9; /*no*/
+  }
 }
 article .title-more{
   position: relative;
   padding: 32px 42px 36px 58px; /*px*/
-  font-size: 22px;  /*px*/
+  font-size: 28px;  /*px*/
   border-bottom: 1px solid #C9C9C9; /*no*/
   overflow: hidden;
 
@@ -397,8 +401,8 @@ article .title-more{
 
   li {
     position: relative;
-    padding-left: 104px; /*px*/
-    padding-bottom: 28px; /*px*/
+    padding-left: 134px; /*px*/
+    padding-bottom: 34px; /*px*/
     line-height: 38px;  /*px*/
 
     > span {
@@ -407,15 +411,16 @@ article .title-more{
       top: 0;
       display: inline-block;
       vertical-align: bottom;
-      width: 104px; /*px*/
+      width: 134px; /*px*/
       color: #acacac;
     }
 
     &:last-child {
       padding-bottom: 0;
     }
-
+    &:last-child,
     &:first-child {
+      color: #585858;
     }
   }
 }
@@ -424,7 +429,7 @@ article .title-more{
   margin-bottom: 28px;
   line-height: 42px;  /*px*/
   background-color: #FCFCFC;
-  border-bottom: 1px solid #C9C9C9; /*no*/
+  //border-bottom: 1px solid #C9C9C9; /*no*/
   background-image: url("../images/info-cell-icon.jpg");
   background-repeat: no-repeat;
   background-position: 0 57px;  /*px*/
@@ -502,7 +507,7 @@ article .title-more{
   -webkit-justify-content: center;
 }
 .info-title{
-  font-size: 28px;  /*px*/
+  font-size: 30px;  /*px*/
   color: #222;
   -webkit-line-clamp: 3;
 }
@@ -538,13 +543,13 @@ article .title-more{
 .companion-section {
   padding-left: 58px; /*px*/
   padding-right: 58px;  /*px*/
-  font-size: 28px;  /*px*/
+  font-size: 30px;  /*px*/
   line-height: 52px;  /*px*/
   color: #777;
 }
 
 .about-section {
-  font-size: 28px; /*px*/
+  font-size: 30px; /*px*/
   padding-top: 75px;
   padding-bottom: 75px;
   line-height: 52px;
@@ -557,7 +562,7 @@ article .title-more{
 
 .classify-title {
   padding: 55px 0 50px 5px; /*px*/
-  font-size: 28px;  /*px*/
+  font-size: 32px;  /*px*/
   color: #333;
   text-align: center;
 }
@@ -572,14 +577,14 @@ article .title-more{
   margin-bottom: 26px; /*px*/
   padding: 38px 40px 30px 34px; /*px*/
   width: 100%;
-  font-size: 22px; /*px*/
+  font-size: 24px; /*px*/
   text-align: center;
   color: #999;
   background-color: #EDEDED;
 
   i {
     margin-right: 10px; /*px*/
-    color: #D4A751;
+    color: #E44848;
   }
 
   h4 {
@@ -603,8 +608,6 @@ article .title-more{
 .wx-item {
   display: -webkit-flex;
   justify-content: center;
-  padding-left: 70px!important;/*px*/
-  padding-right: 70px!important;/*px*/
   i {
     display: block;
   }
@@ -612,7 +615,7 @@ article .title-more{
     padding-top: 14px;  /*px*/
   }
   span {
-    font-size: 16px;  /*px*/
+    font-size: 20px;  /*px*/
   }
   .erweima {
     margin-left: 30px;
@@ -625,6 +628,9 @@ article .title-more{
 .time-item {
   h4 {
     font-size: 50px;  /*px*/
+  }
+  p {
+    font-size: 22px; /*px*/
   }
 }
 .service-item {
@@ -653,25 +659,26 @@ article .title-more{
 }
 
 .hint-box {
-  border-top: 1px solid #C9C9C9; /*no*/
+  //border-top: 1px solid #C9C9C9; /*no*/
   padding-top: 50px; /*px*/
   background-color: #FCFCFC;
 
   .hint-lists {
     padding-left: 35px; /*px*/
     position: relative;
+    text-align: left;
     i {
       position: absolute;
       left: 0;
       top: 14px;  /*px*/
-      color: #FCD259;
+      color: #E44848;
     }
   }
 }
 
 .all-info-article {
   .classify-title {
-    color: #EA4848;
+    color: #db0200;
     text-align: left;
   }
 }
