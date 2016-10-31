@@ -951,19 +951,19 @@ article .title-more li:first-child {
 [data-dpr="1"] .about-concat-item {
   margin-bottom: 13px;
   padding: 19px 20px 15px 17px;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 [data-dpr="2"] .about-concat-item {
   margin-bottom: 26px;
   padding: 38px 40px 30px 34px;
-  font-size: 24px;
+  font-size: 26px;
 }
 
 [data-dpr="3"] .about-concat-item {
   margin-bottom: 39px;
   padding: 57px 60px 45px 51px;
-  font-size: 36px;
+  font-size: 39px;
 }
 
 .about-concat-item i {
