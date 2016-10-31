@@ -1205,4 +1205,8 @@ article .title-more li:first-child {
   text-align: left;
 }
 
+.fa-qrcode {
+  margin-right: 0 !important;
+}
+
 /*# sourceMappingURL=layout.debug.css.map */
