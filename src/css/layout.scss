@@ -39,6 +39,9 @@ input,button{
   display: -webkit-box;
   -webkit-box-orient: vertical;
 }
+html {
+  font-size: 64px;
+}
 
 .guide-wrap{
   height: 0;
@@ -372,7 +375,8 @@ article img {
   padding: 0;
 
   h1 {
-    padding: 44px 58px; /*px*/
+    padding: 38px 58px; /*px*/
+    line-height: 42px;
     border-bottom: 1px solid #C9C9C9; /*no*/
   }
 }
@@ -402,7 +406,7 @@ article .title-more{
   li {
     position: relative;
     padding-left: 134px; /*px*/
-    padding-bottom: 34px; /*px*/
+    padding-bottom: 20px; /*px*/
     line-height: 38px;  /*px*/
 
     > span {
@@ -420,7 +424,7 @@ article .title-more{
     }
     &:last-child,
     &:first-child {
-      color: #585858;
+      color: #777;
     }
   }
 }
@@ -518,8 +522,18 @@ article .title-more{
 }
 
 .companion-section {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 50px; /*px*/
+  padding-bottom: 50px; /*px*/
+
+  .wx-item {
+    margin-top: 74px; /*px*/
+    margin-bottom: 0; /*px*/
+    padding-left: 62px; /*px*/
+
+    h3 {
+      padding-top: 40px; /*px*/
+    }
+  }
 }
 
 /*.germany-border,
@@ -575,7 +589,7 @@ article .title-more{
 }
 .about-concat-item {
   margin-bottom: 26px; /*px*/
-  padding: 38px 40px 30px 34px; /*px*/
+  padding: 38px 25px 30px 25px; /*px*/
   width: 100%;
   font-size: 26px; /*px*/
   text-align: center;
@@ -591,7 +605,8 @@ article .title-more{
     color: #282828;
   }
 
-  h3 {
+  .h3 {
+    font-size: 22px;
     padding-bottom: 5px;  /*px*/
   }
 
@@ -606,21 +621,38 @@ article .title-more{
   }
 }
 .wx-item {
+  padding-left: 38px;
+  padding-right: 38px;
   display: -webkit-flex;
   justify-content: center;
   i {
     display: block;
+    padding-bottom: 18px;
   }
   h3 {
-    padding-top: 14px;  /*px*/
+    font-size: 22px;    /*px*/
+    padding-top: 27px;  /*px*/
+    line-height: 38px;  /*px*/
+
+    strong {
+      font-weight: normal;
+      padding-left: 28px;  /*px*/
+      padding-right: 5px;  /*px*/
+      height: 22px;  /*px*/
+      line-height: 22px;  /*px*/
+      border-radius: 4px; /*px*/
+      color: #fff;
+      background: #E0B35D url("../images/wx-strong.png") no-repeat 3px /*px*/ center;
+    }
   }
   span {
     font-size: 20px;  /*px*/
   }
   .erweima {
-    margin-left: 30px;
+    margin-left: 14px;  /*px*/
   }
   img {
+    display: block;
     width: 198px; /*px*/
     height: 198px;  /*px*/
   }
